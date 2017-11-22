@@ -1,0 +1,14 @@
+@import "helpers/settings"
+@import "helpers/mixins"
+
+body
+ +body(0)
+ font-family: $mainFont
+ color: $fontColor
+.main
+ display: grid
+ grid-template-columns: 1fr repeat(8, minmax(auto, 10em)) 1fr
+ grid-template-rows: 1fr
+.wrapper
+ min-height: 100vh
+ background-color: $mainColor

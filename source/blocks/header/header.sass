@@ -1,0 +1,25 @@
+.header, .nav
+ display: grid
+ grid-template-columns: 1fr repeat(8, minmax(auto, 10em)) 1fr
+ grid-template-rows: 1fr
+.nav
+ grid-column: span 10
+ color: #fff
+ background-color: $navBg
+ position: fixed
+ width: 100%
+ z-index: 2
+.menu__list
+ display: grid
+ grid-column: 2/10
+ grid-template-columns: repeat(auto-fill, minmax(10em, 1fr))
+ grid-template-rows: 1fr
+ a
+  display: inline-block
+  padding: $mainPadding 0
+  color: #fff
+  text-decoration: none
+  border-top: 2px solid $navBg;
+  &:hover
+   color: $gold
+   border-top: 2px solid $gold

@@ -1,0 +1,18 @@
+mixin header()
+ .header
+  -
+   var pages = [{
+    id: "home",
+    href: "index.html",
+    title: "Главаня"
+   }, {
+     id: "about",
+     href: "info.html",
+     title: "Инфо"
+   }];
+
+  nav.menu.nav
+   .menu__list
+    each item in pages
+     .menu__item
+       a.menu__link(href=""+item.href)= item.title
